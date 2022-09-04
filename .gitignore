@@ -9,3 +9,5 @@
 
 # Kaustad mida reposse ei lükka
 test/
+.idea/
+out
