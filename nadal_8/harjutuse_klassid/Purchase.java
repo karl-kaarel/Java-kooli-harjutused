@@ -22,4 +22,25 @@ public class Purchase {
     public String toString() {
         return this.productName + ": " +this.amount;
     }
+    public boolean equals(Object object) {
+        if (object == null) {
+            return false;
+        }
+
+        if (getClass() != object.getClass()) {
+            return false;
+        }
+
+        Purchase compared = (Purchase) object;
+
+        if (!this.productName.equals(compared.productName)) {
+            return false;
+        }
+
+        if (this.price() != compared.price()) {
+            return false;
+        }
+
+        return true;
+    }
 }
