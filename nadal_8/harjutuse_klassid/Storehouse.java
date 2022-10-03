@@ -2,6 +2,7 @@ package nadal_8.harjutuse_klassid;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
 public class Storehouse {
     private Map<String, Integer> products;
@@ -39,5 +40,9 @@ public class Storehouse {
                 return true;
             } else return false;
         }else return false;
+    }
+
+    public Set<String> products() {
+        return this.products.keySet();
     }
 }
