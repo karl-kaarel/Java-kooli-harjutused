@@ -1,6 +1,6 @@
 package nadal_9.moving.domain;
 
-public class Item implements Thing{
+public class Item implements Thing, Comparable<Item>{
     private int itemVolume;
     private String itemName;
 
@@ -22,5 +22,14 @@ public class Item implements Thing{
     @Override
     public int getVolume() {
         return this.itemVolume;
+    }
+
+    @Override
+    public int compareTo(Item itemList) {
+        if(this.itemVolume == itemList.getVolume()){
+            return 0;
+        } else if(this.itemVolume > itemList.getVolume()){
+            return 1;
+        } else return -1;
     }
 }
